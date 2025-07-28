@@ -17,30 +17,30 @@
 		</style>
 	</head>
 
-	<body class="bg-teal-200 font-serif leading-normal tracking-normal min-h-screen flex flex-col">
+	<body class="bg-teal-400 font-sans leading-normal tracking-normal min-h-screen flex flex-col">
 		<div class="flex-1 container mx-auto px-4 py-8">
-			<nav class="bg-indigo-200 border border-indigo-700 p-0 inline-flex overflow-hidden mb-3">
+			<nav class="bg-slate-300 border border-blue-600 p-0 inline-flex overflow-hidden mb-3">
 				<div 
 					hx-get="/" 
 					hx-target="#tab-content" 
 					hx-swap="innerHTML"
 					hx-trigger="click"
-					class="flex-1 text-center text-indigo-900 flex items-center justify-center cursor-pointer hover:bg-indigo-100 hover:text-black p-4 text-xl"
+					class="flex-1 text-center flex items-center justify-center cursor-pointer hover:bg-slate-200 p-4 text-xl"
 				>
-					<span>Welcome to Gfetch</span>
+					<span>Home</span>
 				</div>
 			
-				{% comment %} <div class="w-px bg-indigo-700"></div>
+			    <div class="w-px bg-blue-600"></div>
 			
 				<div 
-					hx-get="{% url 'about' %}" 
-					hx-target="#tab-content" 
-					hx-swap="innerHTML"
-					hx-trigger="click"
-					class="flex-1 text-center text-indigo-900 items-center justify-center cursor-pointer hover:bg-indigo-100 hover:text-black p-4 text-xl"
+					{% comment %} hx-get="{% url 'about' %}"  {% endcomment %}
+					{% comment %} hx-target="#tab-content"  {% endcomment %}
+					{% comment %} hx-swap="innerHTML" {% endcomment %}
+					{% comment %} hx-trigger="click" {% endcomment %}
+					class="flex-1 text-center items-center justify-center cursor-pointer hover:bg-slate-200 p-4 text-xl"
 				>
 					<span>About</span>
-				</div> {% endcomment %}
+				</div> 
 			</nav>
 		
 			<div id="tab-content" class="flex-1 mt-3">
@@ -50,21 +50,21 @@
 		</div>
 		
 		<footer class="p-4 w-full">
-			<p class="text-xs text-gray-600">
+			<p class="text-xs">
 				© 2025 Jeff Jacobson
 			</p>
-			<p class="text-xs text-gray-600">
+			<p class="text-xs">
 				<a href="https://github.com/jwjacobson/gfetch-site/blob/main/LICENSE" 
-				class="text-indigo-500" target="_blank" rel="noopener noreferrer">
+				class="text-blue-700" target="_blank" rel="noopener noreferrer">
 				License
 				</a>
 				|<a
 				href="https://github.com/jwjacobson/gfetch-site" 
-				class="text-indigo-500" target="_blank" rel="noopener noreferrer">
+				class="text-blue-700" target="_blank" rel="noopener noreferrer">
 				Source code 
 				</a>
 			</p>
-			<p class="text-xs text-gray-600">
+			<p class="text-xs">
 				Django | htmx | Tailwind CSS 
 			</p>
 		</footer>

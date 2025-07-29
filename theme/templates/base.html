@@ -19,55 +19,8 @@
 
 	<body class="bg-teal-400 font-sans leading-normal tracking-normal min-h-screen flex flex-col">
 		<div class="flex-1 container mx-auto px-4 py-8">
-			<nav class="bg-slate-300 border border-blue-600 p-0 inline-flex overflow-hidden mb-3">
-				<div 
-					hx-get="/" 
-					hx-target="#tab-content" 
-					hx-swap="innerHTML"
-					hx-trigger="click"
-					class="flex-1 text-center flex items-center justify-center cursor-pointer hover:bg-slate-200 p-4 text-xl"
-				>
-					<span>Home</span>
-				</div>
 			
-			    <div class="w-px bg-blue-600"></div>
-			
-				<div 
-					hx-get="{% url 'cli' %}" 
-					hx-target="#tab-content" 
-					hx-swap="innerHTML"
-					hx-trigger="click"
-					class="flex-1 text-center flex items-center justify-center cursor-pointer hover:bg-slate-200 p-4 text-xl"
-				>
-					<span>CLI</span>
-				</div>
-
-				<div class="w-px bg-blue-600"></div>
-			
-				<div 
-					hx-get="{% url 'web' %}" 
-					hx-target="#tab-content" 
-					hx-swap="innerHTML"
-					hx-trigger="click"
-					class="flex-1 text-center flex items-center justify-center cursor-pointer hover:bg-slate-200 p-4 text-xl"
-				>
-					<span>Web</span>
-				</div>
-
-				<div class="w-px bg-blue-600"></div>
-			
-				<div 
-					hx-get="{% url 'blog' %}" 
-					hx-target="#tab-content" 
-					hx-swap="innerHTML"
-					hx-trigger="click"
-					class="flex-1 text-center flex items-center justify-center cursor-pointer hover:bg-slate-200 p-4 text-xl"
-				>
-					<span>Blog</span>
-				</div>
-			</nav>
-		
-			<div id="tab-content" class="flex-1 mt-3">
+			<div id="main-content" class="flex-1 mt-3">
 				{% block content %}
 				{% endblock %}
 			</div>

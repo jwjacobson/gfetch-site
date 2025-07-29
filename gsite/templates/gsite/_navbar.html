@@ -1,0 +1,54 @@
+<nav class="bg-slate-300 border border-blue-600 p-0 inline-flex overflow-hidden mb-3">
+				<div 
+					hx-get="/" 
+					hx-target="#tab-content" 
+					hx-swap="innerHTML"
+					hx-trigger="click"
+					{% comment %} class="flex-1 text-center flex items-center justify-center cursor-pointer hover:bg-slate-200 p-4 text-xl" {% endcomment %}
+					class="flex-1 text-center flex items-center justify-center cursor-pointer p-4 text-xl 
+					{%if active_tab == 'home'%} bg-slate-200 {% else %} hover:bg-slate-200{% endif %}"
+				>
+					<span>Home</span>
+				</div>
+			
+			    <div class="w-px bg-blue-600"></div>
+			
+				<div 
+					hx-get="{% url 'cli' %}" 
+					hx-target="#tab-content" 
+					hx-swap="innerHTML"
+					hx-trigger="click"
+					{% comment %} class="flex-1 text-center flex items-center justify-center cursor-pointer hover:bg-slate-200 p-4 text-xl" {% endcomment %}
+					class="flex-1 text-center flex items-center justify-center cursor-pointer p-4 text-xl 
+					{%if active_tab == 'cli'%} bg-slate-200 {% else %} hover:bg-slate-200{% endif %}"
+				>
+					<span>CLI</span>
+				</div>
+
+				<div class="w-px bg-blue-600"></div>
+			
+				<div 
+					hx-get="{% url 'web' %}" 
+					hx-target="#tab-content" 
+					hx-swap="innerHTML"
+					hx-trigger="click"
+					{% comment %} class="flex-1 text-center flex items-center justify-center cursor-pointer hover:bg-slate-200 p-4 text-xl" {% endcomment %}
+					class="flex-1 text-center flex items-center justify-center cursor-pointer p-4 text-xl 
+					{%if active_tab == 'web'%} bg-slate-200 {% else %} hover:bg-slate-200{% endif %}"
+				>
+					<span>Web</span>
+				</div>
+
+				<div class="w-px bg-blue-600"></div>
+			
+				<div 
+					hx-get="{% url 'blog' %}" 
+					hx-target="#tab-content" 
+					hx-swap="innerHTML"
+					hx-trigger="click"
+					class="flex-1 text-center flex items-center justify-center cursor-pointer text-xl p-4 text-xl
+					{%if active_tab == 'blog'%} bg-slate-200 {% else %} hover:bg-slate-200 {% endif %}"
+				>
+					<span>Blog</span>
+				</div>
+			</nav>

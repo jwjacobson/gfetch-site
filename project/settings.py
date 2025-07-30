@@ -37,6 +37,7 @@ if USE_S3:
         "staticfiles": {
             "BACKEND": "storages.backends.s3.S3Storage",
             "OPTIONS": {
+                "location": "static",
             },
         },
     }

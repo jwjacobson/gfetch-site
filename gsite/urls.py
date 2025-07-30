@@ -6,4 +6,6 @@ urlpatterns = [
     path('cli/', views.cli, name='cli'),
     path('web/', views.web, name='web'),
     path('blog/', views.blog, name='blog'),
+    path('terms/', views.terms, name='terms'),
+    path('privacy/', views.privacy, name='privacy'),
 ]

@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="privacy-content" class="max-w-4xl mx-auto px-6 py-8">
+        <div class="bg-slate-300 shadow-sm border border-blue-600 p-8 max-w-none">
+            <h1 class="text-3xl font-bold text-gray-900 mb-6">Privacy Policy for Gfetch</h1>
+            <p class="text-gray-600 italic mb-8">Last Updated: 2025-07-30</p>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">1. Introduction</h2>
+            <p class="mb-4 leading-relaxed">This Privacy Policy describes how Gfetch ("we," "our," or "the Application") handles your information when you use our Gmail email download application. We are committed to protecting your privacy and ensuring transparency about our data practices.</p>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">2. Information We Access</h2>
+            <h3 class="text-lg font-medium text-gray-800 mt-6 mb-3">2.1 Gmail Data</h3>
+            <p class="mb-4 leading-relaxed">When you use Gfetch, the Application accesses:</p>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2">Email messages (including headers, body, and metadata)</li>
+                <li class="mb-2">Email attachments</li>
+                <li class="mb-2">Email addresses (sender and recipient information)</li>
+                <li class="mb-2">Email dates and subjects</li>
+            </ul>
+
+            <h3 class="text-lg font-medium text-gray-800 mt-6 mb-3">2.2 Authentication Data</h3>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2">Google OAuth 2.0 tokens (stored locally on your device)</li>
+                <li class="mb-2">Your Google account email address (for authentication purposes)</li>
+            </ul>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">3. How We Use Your Information</h2>
+            <p class="mb-4 leading-relaxed">Gfetch uses your Gmail data solely to:</p>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2">Authenticate your Google account</li>
+                <li class="mb-2">Download emails you select</li>
+                <li class="mb-2">Save emails and attachments to your local device</li>
+                <li class="mb-2">Format and organize downloaded content</li>
+            </ul>
+
+            <div class="bg-red-50 border border-red-200 p-4 my-6">
+                <p class="font-semibold text-red-800 mb-2">We do NOT:</p>
+                <ul class="list-disc text-red-700 mb-4 pl-6">
+                    <li class="mb-2">Store your data on external servers</li>
+                    <li class="mb-2">Share your data with third parties</li>
+                    <li class="mb-2">Use your data for advertising or marketing</li>
+                    <li class="mb-2">Analyze your email content for any purpose beyond downloading</li>
+                </ul>
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">4. Data Storage and Security</h2>
+            <h3 class="text-lg font-medium text-gray-800 mt-6 mb-3">4.1 Local Storage Only</h3>
+            <p class="mb-4 leading-relaxed">All data accessed by Gfetch is stored exclusively on your local device in the following formats:</p>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2">Raw emails (.eml files)</li>
+                <li class="mb-2">Cleaned emails (.txt files)</li>
+                <li class="mb-2">Attachments (original formats)</li>
+                <li class="mb-2">OAuth tokens (JSON format)</li>
+            </ul>
+
+            <h3 class="text-lg font-medium text-gray-800 mt-6 mb-3">4.2 No Cloud Storage</h3>
+            <p class="mb-4 leading-relaxed">Gfetch does not transmit, upload, or store any of your data on cloud servers or external systems.</p>
+
+            <h3 class="text-lg font-medium text-gray-800 mt-6 mb-3">4.3 Security Measures</h3>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2">OAuth tokens are stored in a separate file with restricted permissions</li>
+                <li class="mb-2">The Application uses Google's secure OAuth 2.0 flow for authentication</li>
+                <li class="mb-2">All data transmission occurs directly between your device and Google's servers using HTTPS</li>
+            </ul>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">5. Data Retention</h2>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2"><strong class="font-semibold text-gray-900">Downloaded emails</strong>: Retained on your device until you manually delete them</li>
+                <li class="mb-2"><strong class="font-semibold text-gray-900">OAuth tokens</strong>: Retained until you revoke access or delete the token file</li>
+                <li class="mb-2"><strong class="font-semibold text-gray-900">No server retention</strong>: Since we don't use servers, we don't retain any of your data</li>
+            </ul>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">6. Your Rights and Controls</h2>
+            <p class="mb-4 leading-relaxed">You have complete control over your data:</p>
+
+            <h3 class="text-lg font-medium text-gray-800 mt-6 mb-3">6.1 Access Control</h3>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2">You choose which email addresses to download emails from</li>
+                <li class="mb-2">You can stop the download process at any time</li>
+            </ul>
+
+            <h3 class="text-lg font-medium text-gray-800 mt-6 mb-3">6.2 Data Deletion</h3>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2">Delete downloaded emails using the Application's delete function</li>
+                <li class="mb-2">Remove OAuth tokens by deleting the token.json file</li>
+                <li class="mb-2">Revoke access through your Google Account settings</li>
+            </ul>
+
+            <h3 class="text-lg font-medium text-gray-800 mt-6 mb-3">6.3 Data Portability</h3>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2">All downloaded emails are in standard formats (.eml, .txt)</li>
+                <li class="mb-2">You can move, copy, or transfer files as needed</li>
+            </ul>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">7. Google API Services Compliance</h2>
+            <p class="mb-4 leading-relaxed">Gfetch's use of Google API Services complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy" class="text-blue-600 hover:text-blue-800 underline">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+            <h3 class="text-lg font-medium text-gray-800 mt-6 mb-3">7.1 Limited Use Disclosure</h3>
+            <p class="mb-4 leading-relaxed">Gfetch's use and transfer of information received from Google APIs adheres to Google API Services User Data Policy, including the Limited Use requirements. We only use Gmail data to provide the email download functionality you've requested.</p>
+
+            <h3 class="text-lg font-medium text-gray-800 mt-6 mb-3">7.2 Scope of Access</h3>
+            <p class="mb-4 leading-relaxed">Gfetch only requests read-only access to Gmail (<code class="bg-orange-100 px-2 py-1 text-sm">https://www.googleapis.com/auth/gmail.readonly</code>) and cannot modify or delete your emails on Gmail servers.</p>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">8. Third-Party Services</h2>
+            <p class="mb-4 leading-relaxed">Gfetch uses:</p>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2"><strong class="font-semibold text-gray-900">Google Gmail API</strong>: To access your email data (governed by Google's Privacy Policy)</li>
+                <li class="mb-2"><strong class="font-semibold text-gray-900">Google OAuth 2.0</strong>: For secure authentication</li>
+            </ul>
+            <p class="mb-4 leading-relaxed">No other third-party services are used.</p>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">9. Children's Privacy</h2>
+            <p class="mb-4 leading-relaxed">Gfetch is not intended for use by children under 13 years of age. We do not knowingly collect information from children under 13.</p>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">10. Open Source Transparency</h2>
+            <p class="mb-4 leading-relaxed">Gfetch is open-source software. You can review our source code at:</p>
+            <div class="bg-blue-50 border border-blue-200 p-4">
+                <a href="https://github.com/jwjacobson/gfetch-cli" class="text-blue-700 font-medium">https://github.com/jwjacobson/gfetch-cli</a>
+            </div>
+            <p class="mb-4 leading-relaxed">This transparency allows you to verify our privacy practices.</p>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">11. Changes to This Policy</h2>
+            <p class="mb-4 leading-relaxed">We may update this Privacy Policy from time to time. Changes will be indicated by updating the "Last Updated" date. Continued use of the Application after changes constitutes acceptance of the updated policy.</p>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">12. Data Breach Notification</h2>
+            <p class="mb-4 leading-relaxed">Since Gfetch doesn't store your data on servers, the risk of a data breach is limited to your local device. However, if we become aware of any security vulnerability in the Application that could compromise your local data, we will:</p>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2">Post a notice on our GitHub repository</li>
+                <li class="mb-2">Release a security update as soon as possible</li>
+            </ul>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">13. International Data Transfers</h2>
+            <p class="mb-4 leading-relaxed">Gfetch does not transfer data internationally. Your data remains on your local device in your jurisdiction.</p>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">14. Contact Information</h2>
+            <p class="mb-4 leading-relaxed">For questions about this Privacy Policy or our privacy practices, contact:</p>
+            <div class="bg-gray-50 p-4">
+                <p class="mb-1"><strong class="font-semibold text-gray-900">Jeff Jacobson</strong></p>
+                <p class="mb-1">Email: <a href="mailto:jeffjacobsonhimself@gmail.com" class="text-blue-600 hover:text-blue-800 underline">jeffjacobsonhimself@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/jwjacobson/gfetch-cli" class="text-blue-600 hover:text-blue-800 underline">https://github.com/jwjacobson/gfetch-cli</a></p>
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">15. Additional Rights</h2>
+            <p class="mb-4 leading-relaxed">Depending on your location, you may have additional privacy rights under laws such as GDPR or CCPA. Since your data is stored locally and never transmitted to us, you maintain full control over exercising these rights.</p>
+
+            <h2 class="text-xl font-semibold text-gray-800 mt-8 mb-4">16. Compliance Statement</h2>
+            <p class="mb-4 leading-relaxed">This Privacy Policy is designed to comply with:</p>
+            <ul class="list-disc mb-4 pl-6">
+                <li class="mb-2">Google API Services User Data Policy</li>
+                <li class="mb-2">General Data Protection Regulation (GDPR)</li>
+                <li class="mb-2">California Consumer Privacy Act (CCPA)</li>
+                <li class="mb-2">Other applicable privacy laws and regulations</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

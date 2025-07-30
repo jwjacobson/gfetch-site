@@ -31,3 +31,13 @@ def blog(request):
     return render(
         request, "gsite/_blog.html", context,
         )
+
+def terms(request):
+    return render(
+        request, "gsite/terms.html"
+        )
+
+def privacy(request):
+    return render(
+        request, "gsite/privacy.html"
+        )

@@ -3,13 +3,28 @@
 <div id="tab-content" class="flex-1 mt-3">
 <div class="max-w-xl bg-slate-300 border border-blue-600 shadow-lg overflow-hidden p-4">
 
-    <div class="text-left">
-        <h1 class="text-3xl font-bold">Devblog</h1>
-        <p class="mt-6 text-l leading-relaxed">
-        Coming soon!
-        </p>
+    {% for post in posts %}
+    <div class="text-left mb-8">
+        <!-- Blog Post Header -->
+        <h1 class="text-3xl font-bold mb-3 leading-tight">
+            {{ post.title }}
+        </h1>
+        
+        <!-- Created Date -->
+        <div class="flex items-center text-sm text-gray-600 mb-6">
+            <time>{{ post.created_on }}</time>
+        </div>
+        
+        <!-- Blog Post Body -->
+        <div class="leading-relaxed space-y-4">
+            {% for paragraph in post.get_paragraphs %}
+            <p class="text-lg text-gray-800 font-medium">
+                {{ paragraph|linebreaksbr }}
+            </p>
+            {% endfor %}
+        </div>
 
     </div>
-
+    {% endfor %}
 </div>
 </div>

@@ -9,3 +9,7 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def get_paragraphs(self):
+        paragraphs = self.body.split('\n\n')
+        return [p.strip() for p in paragraphs if p.strip()]

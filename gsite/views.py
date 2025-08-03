@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.shortcuts import render
 
+from gsite.models import BlogPost
+
 def index(request):
     context = {'active_tab': 'home'}
 
@@ -26,7 +28,9 @@ def web(request):
         )
 
 def blog(request):
-    context = {'active_tab': 'blog'}
+    posts = BlogPost.objects.all()
+
+    context = {'active_tab': 'blog', 'posts': posts}
 
     return render(
         request, "gsite/_blog.html", context,

@@ -17,11 +17,9 @@
         
         <!-- Blog Post Body -->
         <div class="leading-relaxed space-y-4">
-            {% for paragraph in post.get_paragraphs %}
             <p class="text-lg text-gray-800 font-medium">
-                {{ paragraph|linebreaksbr }}
+                {{ post.body|markdownify }}
             </p>
-            {% endfor %}
         </div>
 
     </div>

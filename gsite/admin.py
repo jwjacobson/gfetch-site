@@ -6,6 +6,6 @@ from gsite.models import BlogPost
 @admin.register(BlogPost)
 class BlogPostAdmin(MarkdownxModelAdmin):
     list_display = ["title", "created_on"]
-    list_filter = ['created_on', 'last_updated']
+    list_filter = ['created_on', 'last_modified']
     search_fields = ("title", "body", "created_on")
-    readonly_fields = ['created_on', 'last_updated']
+    readonly_fields = ['created_on', 'last_modified']

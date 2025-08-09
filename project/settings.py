@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'markdownify',
-    'markdownx',
     'tailwind',
     'theme',
     'gsite.apps.GsiteConfig'
@@ -136,25 +135,3 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Markdownx settings
-MARKDOWNX_IMAGE_MAX_SIZE = {'size': (500, 500), 'quality': 90}
-MARKDOWNX_UPLOAD_URLS_PATH = '/markdownx/upload/'
-MARKDOWNX_MEDIA_PATH = 'markdownx/'
-
-MARKDOWNX_EDITOR_RESIZABLE = True  # Allow resizing of editor
-
-MARKDOWNX_MARKDOWN_EXTENSIONS = [
-    'markdown.extensions.fenced_code',
-    'markdown.extensions.tables',
-    'markdown.extensions.nl2br',  # Newline to <br>
-    'markdown.extensions.toc',     # Table of contents
-    'markdown.extensions.extra',   # Various extras
-]
-
-MARKDOWNX_MARKDOWN_EXTENSION_CONFIGS = {
-    'markdown.extensions.codehilite': {
-        'linenums': False,
-        'use_pygments': True,
-    }
-}

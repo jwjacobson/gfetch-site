@@ -46,7 +46,6 @@ else:
     STATIC_URL = "/static/"
     STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
-
 # Application definition
 
 INSTALLED_APPS = [

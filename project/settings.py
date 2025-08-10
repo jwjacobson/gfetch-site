@@ -134,3 +134,26 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MARKDOWNIFY = {
+    "default": {
+        "WHITELIST_TAGS": [
+            'a', 'abbr', 'acronym', 'b', 'blockquote', 'em', 'i',
+            'li', 'ol', 'p', 'strong', 'ul', 'h1', 'h2', 'h3', 
+            'h4', 'h5', 'h6', 'code', 'pre', 'img', 'hr', 'br',
+            'table', 'thead', 'tbody', 'tr', 'th', 'td',
+        ],
+        "WHITELIST_ATTRS": [
+            'href', 'src', 'alt', 'class', 'id', 'title', 'target', 'rel'
+        ],
+        "WHITELIST_STYLES": [],
+        "MARKDOWN_EXTENSIONS": [
+            'markdown.extensions.fenced_code',
+            'markdown.extensions.tables',
+            'markdown.extensions.extra', 
+        ],
+        "WHITELIST_PROTOCOLS": [
+            'http', 'https'
+        ]
+    }
+}

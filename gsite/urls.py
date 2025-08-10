@@ -8,4 +8,5 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('terms/', views.terms, name='terms'),
     path('privacy/', views.privacy, name='privacy'),
+    path('images/<path:path>', views.image_redirect, name='image_redirect')
 ]

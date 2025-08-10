@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 from gsite.models import BlogPost
 
@@ -45,3 +45,10 @@ def privacy(request):
     return render(
         request, "gsite/privacy.html"
         )
+
+def image_redirect(request, path):
+    if settings.USE_S3:
+        s3_url = f"https://{settings.AWS_S3_CUSTOM_DOMAIN}/images/{path}"
+        return redirect(s3_url)
+    else:
+        return redirect(f"{settings.STATIC_URL}images/{path}")
